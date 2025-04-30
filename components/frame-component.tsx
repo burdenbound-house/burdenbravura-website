@@ -44,7 +44,7 @@ export function FrameComponent({
   onBorderSizeChange,
   showControls,
   label,
-  showFrame,
+  showFrame, // This will always be false now
   isHovered,
 }: FrameComponentProps) {
   const [isZoomed, setIsZoomed] = useState(false)
@@ -61,23 +61,23 @@ export function FrameComponent({
       onMouseLeave={() => setIsZoomed(false)}
     >
       <div className="relative w-full h-full overflow-hidden bg-[#120003]">
-        {/* Circular overhead spotlight - now bigger */}
+        {/* Circular overhead spotlight */}
         <div className="overhead-glow" style={{ opacity: isHovered ? 1 : 0 }} />
 
-        {/* Enhanced overhead spotlight for dynamic frames - now bigger */}
+        {/* Enhanced overhead spotlight for dynamic frames */}
         <div className="dynamic-overhead-glow" style={{ opacity: isHovered ? 1 : 0 }} />
 
-        {/* Image with Border */}
+        {/* Image with Border (now borderless) */}
         <div
           className="absolute inset-0 flex items-center justify-center"
           style={{
             zIndex: 1,
             transition: "all 0.3s ease-in-out",
-            padding: showFrame ? `${borderThickness}px` : "0",
-            width: showFrame ? `${borderSize}%` : "100%",
-            height: showFrame ? `${borderSize}%` : "100%",
-            left: showFrame ? `${(100 - borderSize) / 2}%` : "0",
-            top: showFrame ? `${(100 - borderSize) / 2}%` : "0",
+            padding: "0", // Always 0 for borderless
+            width: "100%", // Always 100% for borderless
+            height: "100%", // Always 100% for borderless
+            left: "0", // Always 0 for borderless
+            top: "0", // Always 0 for borderless
           }}
         >
           <div
@@ -99,70 +99,13 @@ export function FrameComponent({
                 priority={true}
               />
 
-              {/* Enhanced placeholder watermark - now more visible */}
+              {/* Enhanced placeholder watermark */}
               <div className="placeholder-watermark"></div>
             </div>
           </div>
         </div>
 
-        {/* Frame Elements (Higher z-index) */}
-        {showFrame && (
-          <div className="absolute inset-0" style={{ zIndex: 2 }}>
-            {/* Corners */}
-            <div
-              className="absolute top-0 left-0 w-16 h-16 bg-contain bg-no-repeat"
-              style={{ backgroundImage: `url(${corner})` }}
-            />
-            <div
-              className="absolute top-0 right-0 w-16 h-16 bg-contain bg-no-repeat"
-              style={{ backgroundImage: `url(${corner})`, transform: "scaleX(-1)" }}
-            />
-            <div
-              className="absolute bottom-0 left-0 w-16 h-16 bg-contain bg-no-repeat"
-              style={{ backgroundImage: `url(${corner})`, transform: "scaleY(-1)" }}
-            />
-            <div
-              className="absolute bottom-0 right-0 w-16 h-16 bg-contain bg-no-repeat"
-              style={{ backgroundImage: `url(${corner})`, transform: "scale(-1, -1)" }}
-            />
-
-            {/* Edges */}
-            <div
-              className="absolute top-0 left-16 right-16 h-16"
-              style={{
-                backgroundImage: `url(${edgeHorizontal})`,
-                backgroundSize: "auto 64px",
-                backgroundRepeat: "repeat-x",
-              }}
-            />
-            <div
-              className="absolute bottom-0 left-16 right-16 h-16"
-              style={{
-                backgroundImage: `url(${edgeHorizontal})`,
-                backgroundSize: "auto 64px",
-                backgroundRepeat: "repeat-x",
-                transform: "rotate(180deg)",
-              }}
-            />
-            <div
-              className="absolute left-0 top-16 bottom-16 w-16"
-              style={{
-                backgroundImage: `url(${edgeVertical})`,
-                backgroundSize: "64px auto",
-                backgroundRepeat: "repeat-y",
-              }}
-            />
-            <div
-              className="absolute right-0 top-16 bottom-16 w-16"
-              style={{
-                backgroundImage: `url(${edgeVertical})`,
-                backgroundSize: "64px auto",
-                backgroundRepeat: "repeat-y",
-                transform: "scaleX(-1)",
-              }}
-            />
-          </div>
-        )}
+        {/* Frame Elements - removed since showFrame will always be false */}
 
         {/* Title overlay */}
         {title && (
@@ -172,7 +115,7 @@ export function FrameComponent({
         )}
       </div>
 
-      {/* Controls */}
+      {/* Controls - kept for potential future use but will never show */}
       {showControls && (
         <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#120003] bg-opacity-90 z-10">
           <div className="text-white font-bold mb-2">{label}</div>

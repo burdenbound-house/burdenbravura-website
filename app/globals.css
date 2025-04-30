@@ -131,22 +131,6 @@ body {
   z-index: 10;
 }
 
-/* Frame border glow effect */
-.frame-border {
-  box-shadow: 0 0 15px rgba(215, 167, 122, 0.2);
-  transition: box-shadow 0.3s ease;
-}
-
-.frame-container:hover .frame-border {
-  box-shadow: 0 0 25px rgba(215, 167, 122, 0.4);
-}
-
-/* Frame corner and edge transitions */
-.frame-corner,
-.frame-edge {
-  transition: opacity 0.3s ease;
-}
-
 /* Frame image zoom effect */
 .frame-image {
   transition: transform 0.5s ease;
@@ -154,4 +138,18 @@ body {
 
 .frame-container:hover .frame-image {
   transform: scale(1.05);
+}
+
+/* Borderless gallery card styles */
+.gallery-card {
+  overflow: hidden;
+  border-radius: 0; /* No rounded corners for borderless design */
+  background-color: #120003;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }

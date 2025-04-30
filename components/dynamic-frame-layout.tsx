@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { Switch } from "@/components/ui/switch"
 import { motion } from "framer-motion"
 import { FrameComponent } from "./frame-component"
 
@@ -52,14 +51,15 @@ export default function DynamicFrameLayout({ images }: { images: { src: string; 
       edgeHorizontal: edgeHorizontalAsset,
       edgeVertical: edgeVerticalAsset,
       mediaSize: 1,
-      borderThickness: 8,
-      borderSize: 90,
+      borderThickness: 0, // Set to 0 for borderless
+      borderSize: 100, // Set to 100% for borderless
       isHovered: false,
     }
   })
 
   const [frames, setFrames] = useState<Frame[]>(initialFrames)
-  const [showFrames, setShowFrames] = useState(true)
+  // Always set showFrames to false for borderless display
+  const showFrames = false
   const [showControls, setShowControls] = useState(false)
   const [cleanInterface, setCleanInterface] = useState(true)
   const [hovered, setHovered] = useState<HoveredState | null>(null)
@@ -96,16 +96,7 @@ export default function DynamicFrameLayout({ images }: { images: { src: string; 
 
   return (
     <div className="space-y-4 w-full h-full">
-      <div className="flex justify-between items-center mb-4">
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-2">
-            <Switch id="frame-toggle" checked={showFrames} onCheckedChange={setShowFrames} />
-            <label htmlFor="frame-toggle" className="text-sm text-[#E0E0E0]">
-              {showFrames ? "Hide Frames" : "Show Frames"}
-            </label>
-          </div>
-        </div>
-      </div>
+      {/* Removed the toggle switch section */}
 
       <div
         className="relative w-full"
@@ -154,7 +145,7 @@ export default function DynamicFrameLayout({ images }: { images: { src: string; 
                 onBorderSizeChange={(value) => updateFrameProperty(frame.id, "borderSize", value)}
                 showControls={showControls && !cleanInterface}
                 label={frame.title || `Frame ${frame.id}`}
-                showFrame={showFrames}
+                showFrame={showFrames} // Always false for borderless
                 isHovered={
                   hovered?.row === Math.floor(frame.defaultPos.y / 4) &&
                   hovered?.col === Math.floor(frame.defaultPos.x / 4)
