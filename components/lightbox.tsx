@@ -97,7 +97,7 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose }: Ligh
             }}
           />
 
-          {/* Placeholder watermark in lightbox */}
+          {/* Enhanced placeholder watermark in lightbox */}
           <div className="placeholder-watermark absolute inset-0"></div>
         </div>
 

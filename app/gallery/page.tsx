@@ -1,11 +1,11 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import Image from "next/image"
 import dynamic from "next/dynamic"
 import CursorSpotlight from "@/components/cursor-spotlight"
 
-// Dynamically import the Lightbox component with SSR disabled
+// Dynamically import components
+const DynamicFrameLayout = dynamic(() => import("@/components/dynamic-frame-layout"), { ssr: false })
 const Lightbox = dynamic(() => import("@/components/lightbox"), { ssr: false })
 
 // Gallery images with real dark academia images
@@ -74,39 +74,31 @@ export default function GalleryPage() {
     setLightboxOpen(true)
   }
 
+  // Function to handle image click in the dynamic frame layout
+  const handleImageClick = (index: number) => {
+    openLightbox(index)
+  }
+
   return (
     <>
       <CursorSpotlight />
       <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-playfair text-center mb-16">Gallery</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
-          {galleryImages.map((image, index) => (
-            <div
-              key={index}
-              className="relative overflow-hidden cursor-pointer bg-[#120003] p-5 shadow-md gallery-card"
-              onClick={() => openLightbox(index)}
-            >
-              <div className="aspect-[4/3] relative">
-                {/* Circular overhead spotlight */}
-                <div className="overhead-glow"></div>
-
-                <Image
-                  src={image.src || "/placeholder.svg"}
-                  alt={image.alt}
-                  fill
-                  className="object-cover image-hover z-0"
-                />
-
-                {/* Placeholder watermark */}
-                <div className="placeholder-watermark"></div>
-              </div>
-
-              <div className="py-4">
-                <h3 className="text-white font-playfair text-lg">{image.title}</h3>
-              </div>
-            </div>
-          ))}
+        {/* Dynamic Frame Layout */}
+        <div
+          className="mb-16"
+          onClick={(e) => {
+            // Find the closest gallery-card parent
+            const card = (e.target as HTMLElement).closest(".gallery-card")
+            if (card) {
+              // Get the index from the data attribute or another method
+              const index = Array.from(card.parentElement?.children || []).indexOf(card)
+              if (index >= 0) handleImageClick(index)
+            }
+          }}
+        >
+          <DynamicFrameLayout images={galleryImages} />
         </div>
 
         <Lightbox
