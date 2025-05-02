@@ -4,13 +4,15 @@ export default function AboutPage() {
   return (
     <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto overhead-spotlight top-vignette">
       <h1 className="text-4xl md:text-5xl font-playfair text-center mb-4 metallic-champagne">About</h1>
-      <p className="text-burnished-gold text-center max-w-2xl mx-auto mb-8 font-light">Our mission and philosophy</p>
+      <p className="text-burnished-gold text-center max-w-2xl mx-auto mb-8 font-light font-playfair">
+        Our mission and philosophy
+      </p>
 
       {/* Subtle burnished gold divider */}
       <div className="divider-burnished-gold mx-auto w-24 mb-12"></div>
 
       <div className="prose prose-invert max-w-none bg-[#120003] p-8 shadow-md">
-        <p className="text-champagne text-lg leading-relaxed mb-6 font-light">
+        <p className="text-champagne text-lg leading-relaxed mb-6 font-light font-playfair">
           A Space to Witness. A Place to Be Witnessed.
         </p>
 
@@ -55,7 +57,7 @@ export default function AboutPage() {
         <div className="flex justify-center">
           <Link
             href="/contact"
-            className="inline-block px-8 py-3 border-2 border-champagne text-champagne hover:text-[#1A0106] hover:bg-champagne transition-all duration-300 text-lg tracking-wide"
+            className="inline-block px-8 py-3 border-2 border-champagne text-champagne hover:text-[#1A0106] hover:bg-champagne transition-all duration-300 text-lg tracking-wide font-playfair"
           >
             Submit Your Portfolio
           </Link>

@@ -7,7 +7,7 @@ export default function BooksPage() {
       <CursorSpotlight />
       <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overhead-spotlight top-vignette">
         <h1 className="text-4xl md:text-5xl font-playfair text-center mb-4 metallic-champagne">Featured Works</h1>
-        <p className="text-burnished-gold text-center max-w-2xl mx-auto mb-8 font-light">
+        <p className="text-burnished-gold text-center max-w-2xl mx-auto mb-8 font-light font-playfair">
           Curated collections that challenge perception and illuminate truth
         </p>
 
@@ -26,7 +26,7 @@ export default function BooksPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-block px-8 py-3 border-2 border-champagne text-champagne hover:text-[#1A0106] hover:bg-champagne transition-all duration-300 text-lg tracking-wide"
+            className="inline-block px-8 py-3 border-2 border-champagne text-champagne hover:text-[#1A0106] hover:bg-champagne transition-all duration-300 text-lg tracking-wide font-playfair"
           >
             Submit Your Work
           </Link>

@@ -50,7 +50,7 @@ export default function ContactForm() {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6 bg-[#120003] p-8 shadow-md">
           <div>
-            <label htmlFor="name" className="block text-burnished-gold mb-2 font-light">
+            <label htmlFor="name" className="block text-burnished-gold mb-2 font-light font-playfair">
               Name
             </label>
             <input
@@ -65,7 +65,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-burnished-gold mb-2 font-light">
+            <label htmlFor="email" className="block text-burnished-gold mb-2 font-light font-playfair">
               Email
             </label>
             <input
@@ -80,7 +80,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label htmlFor="portfolioLink" className="block text-burnished-gold mb-2 font-light">
+            <label htmlFor="portfolioLink" className="block text-burnished-gold mb-2 font-light font-playfair">
               Portfolio Link (Optional)
             </label>
             <input
@@ -94,7 +94,7 @@ export default function ContactForm() {
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-burnished-gold mb-2 font-light">
+            <label htmlFor="message" className="block text-burnished-gold mb-2 font-light font-playfair">
               Message
             </label>
             <textarea
@@ -111,7 +111,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-8 py-3 border-2 border-champagne text-champagne hover:bg-champagne hover:text-[#1A0106] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-8 py-3 border-2 border-champagne text-champagne hover:bg-champagne hover:text-[#1A0106] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed font-playfair"
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>

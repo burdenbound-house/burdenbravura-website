@@ -19,19 +19,34 @@ export default function Navbar() {
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300">
+            <Link
+              href="/"
+              className="font-playfair text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
+            >
               Home
             </Link>
-            <Link href="/gallery" className="text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300">
+            <Link
+              href="/gallery"
+              className="font-playfair text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
+            >
               Gallery
             </Link>
-            <Link href="/books" className="text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300">
+            <Link
+              href="/books"
+              className="font-playfair text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
+            >
               Books
             </Link>
-            <Link href="/about" className="text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300">
+            <Link
+              href="/about"
+              className="font-playfair text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
+            >
               About
             </Link>
-            <Link href="/contact" className="text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300">
+            <Link
+              href="/contact"
+              className="font-playfair text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
+            >
               Contact
             </Link>
           </div>
@@ -54,35 +69,35 @@ export default function Navbar() {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               href="/"
-              className="block px-3 py-2 text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
+              className="block px-3 py-2 font-playfair text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/gallery"
-              className="block px-3 py-2 text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
+              className="block px-3 py-2 font-playfair text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Gallery
             </Link>
             <Link
               href="/books"
-              className="block px-3 py-2 text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
+              className="block px-3 py-2 font-playfair text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Books
             </Link>
             <Link
               href="/about"
-              className="block px-3 py-2 text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
+              className="block px-3 py-2 font-playfair text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="block px-3 py-2 text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
+              className="block px-3 py-2 font-playfair text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
