@@ -15,10 +15,9 @@ export default function Footer() {
         <div className="mb-6">
           <a
             href="https://burdenbound.com"
-            className="text-base font-medium tracking-wide text-champagne hover:metallic-champagne transition-all duration-500 font-playfair relative group"
+            className="text-base font-medium tracking-wide font-playfair relative inline-block overflow-hidden return-link-shimmer"
           >
             <span className="relative z-10">Return to BurdenBound</span>
-            <span className="absolute inset-0 bg-champagne opacity-0 group-hover:opacity-5 blur-sm transition-opacity duration-500"></span>
           </a>
         </div>
 
