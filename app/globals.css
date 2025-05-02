@@ -38,6 +38,40 @@ body {
   font-family: var(--font-playfair);
 }
 
+/* Overhead spotlight effect - NEW */
+.overhead-spotlight {
+  position: relative;
+}
+
+.overhead-spotlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70vh;
+  background: linear-gradient(to bottom, rgba(232, 214, 179, 0.15), rgba(26, 0, 0, 0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Vignette effect at the top - NEW */
+.top-vignette {
+  position: relative;
+}
+
+.top-vignette::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: radial-gradient(ellipse at top, rgba(232, 214, 179, 0.2), rgba(26, 0, 0, 0) 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* Image hover brightness */
 .image-hover {
   transition: all 0.5s ease;
@@ -67,6 +101,10 @@ body {
 
 .gallery-card:hover .overhead-glow,
 .book-card:hover .overhead-glow {
+  opacity: 1;
+}
+
+.book-image-container:hover .overhead-glow {
   opacity: 1;
 }
 

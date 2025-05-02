@@ -3,7 +3,7 @@ import GalleryBrowseCard from "@/components/gallery-browse-card"
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-16 pb-8">
+    <div className="flex flex-col items-center justify-center min-h-screen px-4 pt-16 pb-8 overhead-spotlight top-vignette">
       <div className="max-w-3xl w-full text-center space-y-12 my-auto">
         <h1 className="text-5xl md:text-7xl font-playfair tracking-wider metallic-champagne">BURDENBRAVURA</h1>
 

@@ -82,7 +82,7 @@ export default function GalleryPage() {
   return (
     <>
       <CursorSpotlight />
-      <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+      <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto overhead-spotlight top-vignette">
         <h1 className="text-4xl md:text-5xl font-playfair text-center mb-4 metallic-champagne">Gallery</h1>
         <p className="text-burnished-gold text-center max-w-2xl mx-auto mb-12 font-light">
           A curated collection of visual narratives
