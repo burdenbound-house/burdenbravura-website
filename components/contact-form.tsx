@@ -43,14 +43,14 @@ export default function ContactForm() {
   return (
     <div className="w-full max-w-md mx-auto">
       {isSubmitted ? (
-        <div className="text-center p-8 border border-[#D7A77A]/30 rounded bg-[#120003]">
-          <h3 className="text-xl font-playfair text-white mb-4">Thank you for reaching out.</h3>
+        <div className="text-center p-8 border border-burnished-gold/30 rounded bg-[#120003]">
+          <h3 className="text-xl font-playfair text-champagne mb-4">Thank you for reaching out.</h3>
           <p className="text-[#E0E0E0] font-light">We'll be in touch soon.</p>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-6 bg-[#120003] p-8 shadow-md">
           <div>
-            <label htmlFor="name" className="block text-[#E0E0E0] mb-2 font-light">
+            <label htmlFor="name" className="block text-burnished-gold mb-2 font-light">
               Name
             </label>
             <input
@@ -60,12 +60,12 @@ export default function ContactForm() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-2 bg-[#1A0106] border border-[#D7A77A]/30 focus:border-[#D7A77A] text-white outline-none transition-colors duration-300"
+              className="w-full px-4 py-2 bg-[#1A0106] border border-burnished-gold/30 focus:border-champagne text-white outline-none transition-colors duration-300"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-[#E0E0E0] mb-2 font-light">
+            <label htmlFor="email" className="block text-burnished-gold mb-2 font-light">
               Email
             </label>
             <input
@@ -75,12 +75,12 @@ export default function ContactForm() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-2 bg-[#1A0106] border border-[#D7A77A]/30 focus:border-[#D7A77A] text-white outline-none transition-colors duration-300"
+              className="w-full px-4 py-2 bg-[#1A0106] border border-burnished-gold/30 focus:border-champagne text-white outline-none transition-colors duration-300"
             />
           </div>
 
           <div>
-            <label htmlFor="portfolioLink" className="block text-[#E0E0E0] mb-2 font-light">
+            <label htmlFor="portfolioLink" className="block text-burnished-gold mb-2 font-light">
               Portfolio Link (Optional)
             </label>
             <input
@@ -89,12 +89,12 @@ export default function ContactForm() {
               name="portfolioLink"
               value={formData.portfolioLink}
               onChange={handleChange}
-              className="w-full px-4 py-2 bg-[#1A0106] border border-[#D7A77A]/30 focus:border-[#D7A77A] text-white outline-none transition-colors duration-300"
+              className="w-full px-4 py-2 bg-[#1A0106] border border-burnished-gold/30 focus:border-champagne text-white outline-none transition-colors duration-300"
             />
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-[#E0E0E0] mb-2 font-light">
+            <label htmlFor="message" className="block text-burnished-gold mb-2 font-light">
               Message
             </label>
             <textarea
@@ -104,14 +104,14 @@ export default function ContactForm() {
               rows={5}
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-4 py-2 bg-[#1A0106] border border-[#D7A77A]/30 focus:border-[#D7A77A] text-white outline-none transition-colors duration-300 resize-none"
+              className="w-full px-4 py-2 bg-[#1A0106] border border-burnished-gold/30 focus:border-champagne text-white outline-none transition-colors duration-300 resize-none"
             />
           </div>
 
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-8 py-3 border-2 border-[#D7A77A] text-[#D7A77A] hover:bg-[#D7A77A] hover:text-[#1A0106] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-8 py-3 border-2 border-champagne text-champagne hover:bg-champagne hover:text-[#1A0106] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? "Sending..." : "Send Message"}
           </button>

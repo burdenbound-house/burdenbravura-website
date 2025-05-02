@@ -56,7 +56,7 @@ export default function CursorSpotlight() {
       style={{
         background: isVisible
           ? `radial-gradient(circle 80px at ${position.x}px ${position.y}px, ${
-              isHoveringCard ? "rgba(240, 231, 216, 0.35)" : "rgba(240, 231, 216, 0.3)"
+              isHoveringCard ? "rgba(222, 184, 135, 0.35)" : "rgba(222, 184, 135, 0.3)"
             } 0%, transparent 100%)`
           : "transparent",
         filter: "blur(16px)",

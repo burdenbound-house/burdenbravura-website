@@ -17,6 +17,7 @@ interface LightboxProps {
 
 export default function Lightbox({ images, initialIndex, isOpen, onClose }: LightboxProps) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex)
+  const [isHovered, setIsHovered] = useState(false)
 
   useEffect(() => {
     setCurrentIndex(initialIndex)
@@ -56,7 +57,7 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose }: Ligh
       <div className="absolute top-4 right-4">
         <button
           onClick={onClose}
-          className="text-white hover:text-[#D7A77A] transition-colors duration-300 p-2"
+          className="text-white hover:text-burnished-gold transition-colors duration-300 p-2"
           aria-label="Close lightbox"
         >
           <X className="h-8 w-8" />
@@ -66,7 +67,7 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose }: Ligh
       <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
         <button
           onClick={navigatePrev}
-          className="text-white hover:text-[#D7A77A] transition-colors duration-300 p-2"
+          className="text-white hover:text-burnished-gold transition-colors duration-300 p-2"
           aria-label="Previous image"
         >
           <ChevronLeft className="h-8 w-8" />
@@ -76,15 +77,33 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose }: Ligh
       <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
         <button
           onClick={navigateNext}
-          className="text-white hover:text-[#D7A77A] transition-colors duration-300 p-2"
+          className="text-white hover:text-burnished-gold transition-colors duration-300 p-2"
           aria-label="Next image"
         >
           <ChevronRight className="h-8 w-8" />
         </button>
       </div>
 
-      <div className="max-w-5xl max-h-[80vh] relative">
+      <div
+        className="max-w-5xl max-h-[80vh] relative"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         <div className="relative w-full h-full">
+          {/* Bottom hemisphere light effect for lightbox - updated to Champagne */}
+          <div
+            className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[500px] h-[500px] rounded-full pointer-events-none z-10"
+            style={{
+              background:
+                "radial-gradient(ellipse at center, rgba(232, 214, 179, 0.25) 0%, transparent 70%)" /* Champagne */,
+              filter: "blur(40px)",
+              mixBlendMode: "soft-light",
+              opacity: isHovered ? 1 : 0,
+              transition: "opacity 0.8s ease",
+              bottom: "-250px",
+            }}
+          />
+
           <Image
             src={currentImage.src || "/placeholder.svg"}
             alt={currentImage.alt}
@@ -102,7 +121,7 @@ export default function Lightbox({ images, initialIndex, isOpen, onClose }: Ligh
         </div>
 
         {currentImage.title && (
-          <div className="absolute bottom-0 left-0 right-0 bg-[#120003]/80 p-4 text-white">
+          <div className="absolute bottom-0 left-0 right-0 bg-[#120003]/80 p-4 text-champagne">
             <h3 className="text-lg font-playfair">{currentImage.title}</h3>
           </div>
         )}

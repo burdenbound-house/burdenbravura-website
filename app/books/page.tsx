@@ -39,10 +39,13 @@ export default function BooksPage() {
     <>
       <CursorSpotlight />
       <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-playfair text-center mb-4">Featured Works</h1>
-        <p className="text-[#E0E0E0] text-center max-w-2xl mx-auto mb-16 font-light">
-          Curated collections that challenge perception and illuminate truth through the lens of exceptional artists.
+        <h1 className="text-4xl md:text-5xl font-playfair text-center mb-4 metallic-champagne">Featured Works</h1>
+        <p className="text-burnished-gold text-center max-w-2xl mx-auto mb-12 font-light">
+          Curated collections that challenge perception and illuminate truth
         </p>
+
+        {/* Subtle burnished gold divider */}
+        <div className="divider-burnished-gold mx-auto w-24 mb-16"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
           {featuredBooks.map((book, index) => (
@@ -66,11 +69,11 @@ export default function BooksPage() {
               </div>
 
               <div className="w-full md:w-2/3 flex flex-col">
-                <h2 className="text-3xl font-playfair text-white mb-4">{book.title}</h2>
+                <h2 className="text-3xl font-playfair text-champagne mb-4">{book.title}</h2>
                 <p className="text-[#E0E0E0] mb-6 flex-grow font-light">{book.description}</p>
                 <Link
                   href="#"
-                  className="self-start text-[#D7A77A] hover:text-white border-b border-[#D7A77A] hover:border-white pb-1 transition-colors duration-300"
+                  className="self-start text-burnished-gold hover:text-champagne border-b border-burnished-gold hover:border-champagne pb-1 transition-colors duration-300"
                 >
                   {book.cta}
                 </Link>

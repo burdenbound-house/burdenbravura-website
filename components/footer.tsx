@@ -2,76 +2,55 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="bg-[#120003] py-8 mt-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div>
-            <Link href="/" className="text-white font-playfair text-xl tracking-wider">
-              BURDENBRAVURA
-            </Link>
-            <p className="text-[#E0E0E0] mt-2 text-sm font-light">A Legacy in Focus</p>
-          </div>
-
-          <div className="mt-8 md:mt-0">
-            <ul className="flex flex-wrap gap-x-6 gap-y-2 justify-center md:justify-end">
-              <li className="flex flex-col items-center md:items-end">
-                <Link
-                  href="https://burdenbound.com"
-                  className="text-[#D7A77A] hover:text-[#E0E0E0] transition-colors duration-300"
-                >
-                  BurdenBound
-                </Link>
-                <ul className="mt-2 flex flex-row items-center md:items-end gap-x-4">
-                  <li>
-                    <Link
-                      href="https://www.burdenbourne.com"
-                      className="text-[#D7A77A] hover:text-[#E0E0E0] transition-colors duration-300 text-sm"
-                    >
-                      [Bourne]
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://www.burdenbrae.com"
-                      className="text-[#D7A77A] hover:text-[#E0E0E0] transition-colors duration-300 text-sm"
-                    >
-                      [Brae]
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://www.burdenblythe.com"
-                      className="text-[#D7A77A] hover:text-[#E0E0E0] transition-colors duration-300 text-sm"
-                    >
-                      [Blythe]
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://www.burdenbravura.com"
-                      className="text-[#D7A77A] hover:text-[#E0E0E0] transition-colors duration-300 text-sm"
-                    >
-                      [Bravura]
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link href="/contact" className="text-[#D7A77A] hover:text-[#E0E0E0] transition-colors duration-300">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-[#D7A77A] hover:text-[#E0E0E0] transition-colors duration-300">
-                  About
-                </Link>
-              </li>
-            </ul>
-          </div>
+    <footer className="bg-[#1A0000] py-8 mt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="mb-8">
+          <p className="text-burnished-gold italic text-lg md:text-xl">
+            "From burden, a line. From weight, creation. From endurance, a world."
+          </p>
         </div>
 
-        <div className="mt-8 pt-4 border-t border-[#D7A77A]/10 text-center md:text-left">
-          <p className="text-[#E0E0E0] text-xs">&copy; {new Date().getFullYear()} BurdenBravura</p>
+        <div className="mb-6">
+          <h2 className="text-champagne font-playfair text-xl md:text-2xl">The House of Burden</h2>
+        </div>
+
+        <div className="flex justify-center space-x-6 mb-8">
+          <Link
+            href="https://burdenbound.com"
+            className="text-burnished-gold hover:text-champagne transition-colors duration-300"
+          >
+            [Bound]
+          </Link>
+          <Link
+            href="https://www.burdenbourne.com"
+            className="text-burnished-gold hover:text-champagne transition-colors duration-300"
+          >
+            [Bourne]
+          </Link>
+          <Link
+            href="https://www.burdenbrae.com"
+            className="text-burnished-gold hover:text-champagne transition-colors duration-300"
+          >
+            [Brae]
+          </Link>
+          <Link
+            href="https://www.burdenblythe.com"
+            className="text-burnished-gold hover:text-champagne transition-colors duration-300"
+          >
+            [Blythe]
+          </Link>
+          <Link
+            href="https://www.burdenbravura.com"
+            className="text-burnished-gold hover:text-champagne transition-colors duration-300"
+          >
+            [Bravura]
+          </Link>
+        </div>
+
+        <div className="text-center">
+          <p className="text-[#E0E0E0] text-xs">
+            &copy; {new Date().getFullYear()} BurdenBound LLC. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

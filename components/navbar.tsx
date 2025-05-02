@@ -8,30 +8,30 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav className="fixed w-full z-50 bg-[#120003] border-b border-[#D7A77A]/10 backdrop-blur-sm bg-opacity-90">
+    <nav className="fixed w-full z-50 bg-[#1A0000] border-b border-burnished-gold/10 backdrop-blur-sm bg-opacity-90">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-white font-playfair text-xl tracking-wider">
+            <Link href="/" className="metallic-champagne font-playfair text-xl tracking-wider">
               BURDENBRAVURA
             </Link>
           </div>
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-[#E0E0E0] hover:text-white transition-colors duration-300">
+            <Link href="/" className="text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300">
               Home
             </Link>
-            <Link href="/gallery" className="text-[#E0E0E0] hover:text-white transition-colors duration-300">
+            <Link href="/gallery" className="text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300">
               Gallery
             </Link>
-            <Link href="/books" className="text-[#E0E0E0] hover:text-white transition-colors duration-300">
+            <Link href="/books" className="text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300">
               Books
             </Link>
-            <Link href="/about" className="text-[#E0E0E0] hover:text-white transition-colors duration-300">
+            <Link href="/about" className="text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300">
               About
             </Link>
-            <Link href="/contact" className="text-[#E0E0E0] hover:text-white transition-colors duration-300">
+            <Link href="/contact" className="text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300">
               Contact
             </Link>
           </div>
@@ -40,7 +40,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-white hover:text-[#D7A77A] transition-colors duration-300 focus:outline-none"
+              className="text-white hover:text-burnished-gold transition-colors duration-300 focus:outline-none"
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -50,39 +50,39 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#120003] border-b border-[#D7A77A]/10">
+        <div className="md:hidden bg-[#1A0000] border-b border-burnished-gold/10">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link
               href="/"
-              className="block px-3 py-2 text-[#E0E0E0] hover:text-white transition-colors duration-300"
+              className="block px-3 py-2 text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/gallery"
-              className="block px-3 py-2 text-[#E0E0E0] hover:text-white transition-colors duration-300"
+              className="block px-3 py-2 text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Gallery
             </Link>
             <Link
               href="/books"
-              className="block px-3 py-2 text-[#E0E0E0] hover:text-white transition-colors duration-300"
+              className="block px-3 py-2 text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Books
             </Link>
             <Link
               href="/about"
-              className="block px-3 py-2 text-[#E0E0E0] hover:text-white transition-colors duration-300"
+              className="block px-3 py-2 text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link
               href="/contact"
-              className="block px-3 py-2 text-[#E0E0E0] hover:text-white transition-colors duration-300"
+              className="block px-3 py-2 text-[#E0E0E0] hover:text-burnished-gold transition-colors duration-300"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact

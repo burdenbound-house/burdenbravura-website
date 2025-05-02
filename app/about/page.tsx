@@ -3,10 +3,14 @@ import Link from "next/link"
 export default function AboutPage() {
   return (
     <div className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
-      <h1 className="text-4xl md:text-5xl font-playfair text-center mb-12">About</h1>
+      <h1 className="text-4xl md:text-5xl font-playfair text-center mb-4 metallic-champagne">About</h1>
+      <p className="text-burnished-gold text-center max-w-2xl mx-auto mb-8 font-light">Our mission and philosophy</p>
+
+      {/* Subtle burnished gold divider */}
+      <div className="divider-burnished-gold mx-auto w-24 mb-12"></div>
 
       <div className="prose prose-invert max-w-none bg-[#120003] p-8 shadow-md">
-        <p className="text-[#E0E0E0] text-lg leading-relaxed mb-6 font-light">
+        <p className="text-champagne text-lg leading-relaxed mb-6 font-light">
           A Space to Witness. A Place to Be Witnessed.
         </p>
 
@@ -41,7 +45,7 @@ export default function AboutPage() {
           demands to exist and deserves to persist.
         </p>
 
-        <h2 className="text-2xl font-playfair text-white mt-12 mb-6">Submit Your Work</h2>
+        <h2 className="text-2xl font-playfair text-burnished-gold mt-12 mb-6">Submit Your Work</h2>
 
         <p className="text-[#E0E0E0] leading-relaxed mb-8 font-light">
           BurdenBravura accepts portfolio submissions from established and emerging visual artists. We seek work that
@@ -51,7 +55,7 @@ export default function AboutPage() {
         <div className="flex justify-center">
           <Link
             href="/contact"
-            className="inline-block px-8 py-3 border-2 border-[#D7A77A] text-[#D7A77A] hover:bg-[#D7A77A] hover:text-[#1A0106] transition-all duration-300 text-lg tracking-wide"
+            className="inline-block px-8 py-3 border-2 border-champagne text-champagne hover:text-[#1A0106] hover:bg-champagne transition-all duration-300 text-lg tracking-wide"
           >
             Submit Your Portfolio
           </Link>

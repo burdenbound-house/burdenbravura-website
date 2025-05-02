@@ -44,7 +44,7 @@ export function FrameComponent({
   onBorderSizeChange,
   showControls,
   label,
-  showFrame, // This will always be false now
+  showFrame,
   isHovered,
 }: FrameComponentProps) {
   const [isZoomed, setIsZoomed] = useState(false)
@@ -60,11 +60,11 @@ export function FrameComponent({
       onMouseEnter={() => setIsZoomed(true)}
       onMouseLeave={() => setIsZoomed(false)}
     >
-      <div className="relative w-full h-full overflow-hidden bg-[#120003]">
-        {/* Circular overhead spotlight */}
+      <div className="relative w-full h-full overflow-hidden bg-[#220005]">
+        {/* Bottom hemisphere light effect */}
         <div className="overhead-glow" style={{ opacity: isHovered ? 1 : 0 }} />
 
-        {/* Enhanced overhead spotlight for dynamic frames */}
+        {/* Enhanced bottom light for dynamic frames */}
         <div className="dynamic-overhead-glow" style={{ opacity: isHovered ? 1 : 0 }} />
 
         {/* Image with Border (now borderless) */}
@@ -73,11 +73,11 @@ export function FrameComponent({
           style={{
             zIndex: 1,
             transition: "all 0.3s ease-in-out",
-            padding: "0", // Always 0 for borderless
-            width: "100%", // Always 100% for borderless
-            height: "100%", // Always 100% for borderless
-            left: "0", // Always 0 for borderless
-            top: "0", // Always 0 for borderless
+            padding: "0",
+            width: "100%",
+            height: "100%",
+            left: "0",
+            top: "0",
           }}
         >
           <div
@@ -105,11 +105,9 @@ export function FrameComponent({
           </div>
         </div>
 
-        {/* Frame Elements - removed since showFrame will always be false */}
-
         {/* Title overlay */}
         {title && (
-          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#120003] to-transparent z-10">
+          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#220005] to-transparent z-10">
             <h3 className="text-white font-playfair text-lg">{title}</h3>
           </div>
         )}
@@ -117,7 +115,7 @@ export function FrameComponent({
 
       {/* Controls - kept for potential future use but will never show */}
       {showControls && (
-        <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#120003] bg-opacity-90 z-10">
+        <div className="absolute bottom-0 left-0 right-0 p-2 bg-[#220005] bg-opacity-90 z-10">
           <div className="text-white font-bold mb-2">{label}</div>
           <div className="space-y-2">
             <div>

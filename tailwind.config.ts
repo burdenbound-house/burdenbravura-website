@@ -20,11 +20,13 @@ const config: Config = {
     },
     extend: {
       colors: {
-        "wine-black": "#30010D",
-        "deep-red-black": "#1A0106",
+        "wine-black": "#1A0000", // Darker burgundy from the image
+        "deep-red-black": "#220005", // Slightly lighter burgundy
         "shadow-red": "#120003",
+        champagne: "#E8D6B3", // Metallic pearlized champagne
+        "burnished-gold": "#DEB887", // Adjusted to match the gold in the image
         platinum: "#E0E0E0",
-        bronze: "#D7A77A",
+        bronze: "#D7A77A", // Keeping the original bronze for backward compatibility
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -73,10 +75,20 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        shimmer: "shimmer 8s ease-in-out infinite",
+      },
+      backgroundImage: {
+        "champagne-gradient":
+          "linear-gradient(135deg, #E8D6B3 10%, #F5EAD7 45%, #E8D6B3 55%, #D4C29A 90%, #E8D6B3 100%)",
+        "gold-gradient": "linear-gradient(135deg, #DEB887 10%, #F5D0A9 45%, #DEB887 55%, #C19A6B 90%, #DEB887 100%)",
       },
     },
   },
